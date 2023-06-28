@@ -54,6 +54,13 @@ li {
 
 }
 
+/* ========================== VARIABLES DE COLORES ========================== */
+/* ========================== VARIABLES DE COLORES ========================== */
+
+$header-color: rgb(30, 30, 30);
+$body-color: rgb(20, 20, 20);
+
+
 /* ========================== HEADER ========================== */
 /* ========================== HEADER ========================== */
 
@@ -61,53 +68,55 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: rgb(30, 30, 30);
+    background-color: $header-color;
     align-items: center;
-}
 
-.logo {
-    transition: transform 0.3s ease;
-    padding: 1rem 0px;
-}
+    .logo {
+        transition: transform 0.3s ease;
+        padding: 1rem 0px;
 
-.logo:hover {
-    transform: scale(1.03);
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
 }
 
 .menu {
     display: flex;
     justify-content: space-around;
-}
 
-.menu>li>.anchor_nav {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 2vw;
-    color: rgb(235, 235, 235);
-}
+    &>li>.anchor_nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 2vw;
+        color: rgb(235, 235, 235);
+    }
 
-.menu li a:hover {
-    color: #fdd558;
-    transition: all .3s;
-    transition: opacity 1.5s;
-    background-color: rgb(25, 25, 25);
-    border-radius: 5px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    & li a:hover {
+        color: #fdd558;
+        transition: all .3s;
+        transition: opacity 1.5s;
+        background-color: rgb(25, 25, 25);
+        border-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 
 /* ========================== HERO ========================== */
 /* ========================== HERO ========================== */
 
-.nascar-logo {
-    padding: 10px 0px;
-    display: flex;
-    justify-content: center;
-}
 
+.hero {
+    video {
+        width: 100%;
+    }
 
-.hero video {
-    width: 100%;
+    & .nascar-logo {
+        padding: 10px 0px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -128,43 +137,44 @@ header {
     justify-items: center;
     padding-top: 80px;
     margin-top: -80px;
+
+    .noticia1,
+    .noticia2,
+    .noticia3,
+    .noticia4 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4 auto);
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d";
+        text-align: center;
+        transition: transform 0.3s ease;
+        padding-top: 30px;
+        max-width: 550px;
+    }
+
+    .noticia1:hover,
+    .noticia2:hover,
+    .noticia3:hover,
+    .noticia4:hover {
+        transform: scale(1.03);
+    }
+
+    .image-container {
+        grid-area: a;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
-.noticia1,
-.noticia2,
-.noticia3,
-.noticia4 {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(4 auto);
-    grid-template-areas:
-        "a"
-        "b"
-        "c"
-        "d";
-    text-align: center;
-    transition: transform 0.3s ease;
-    padding-top: 30px;
-    max-width: 550px;
-}
 
-
-.noticia1:hover,
-.noticia2:hover,
-.noticia3:hover,
-.noticia4:hover {
-    transform: scale(1.03);
-}
-
-#noticias .image-container {
-    grid-area: a;
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    width: 100%;
-    height: 100%;
-}
 
 .titulo {
     grid-area: b;
@@ -191,11 +201,13 @@ header {
     border-bottom: 2px solid white;
     font-weight: bold;
     font-size: 100%;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
-.ver-noticia-completa:hover {
-    text-decoration: underline;
-}
+
 
 .ver-completo-container {
     display: flex;
@@ -207,11 +219,13 @@ header {
 .ver-noticias-completas {
     display: inline-block;
     padding: 30px 0px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
-.ver-noticias-completas:hover {
-    text-decoration: underline;
-}
+
 
 
 /* ========================== LIDERES DEL CAMPEONATO ========================== */
@@ -223,6 +237,7 @@ header {
     margin-left: auto;
     align-items: center;
     padding-top: 50px;
+
 }
 
 .pos {
@@ -233,17 +248,18 @@ header {
     margin-left: auto;
     margin-right: auto;
     min-width: 150px;
-}
 
-.pos:hover {
-    background-color: rgb(10, 10, 10);
-    transition: 0.3s;
-    transform: scale(1.02);
-}
+    &:hover {
+        background-color: rgb(10, 10, 10);
+        transition: 0.3s;
+        transform: scale(1.02);
+    }
 
-.lideres .pos .img-container {
-    width: 18vw;
-    min-width: 150px;
+    .img-container {
+        width: 18vw;
+        min-width: 150px;
+    }
+
 }
 
 .nombre {
@@ -263,11 +279,13 @@ header {
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
-.ver-completo:hover {
-    text-decoration: underline;
-}
+
 
 /* ========================== ULTIMOS VIDEOS ========================== */
 /* ========================== ULTIMOS VIDEOS ========================== */
@@ -277,25 +295,29 @@ header {
     display: flex;
     justify-content: center;
     gap: 1vw;
+
+    .vid-container {
+        width: 50%;
+        margin: auto;
+        border: 1px solid white;
+        padding-top: 30%;
+        position: relative;
+
+        & iframe {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
 }
 
-.vid-container {
-    width: 50%;
-    margin: auto;
-    border: 1px solid white;
-    padding-top: 30%;
-    position: relative;
-}
 
-.vid-container iframe {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-}
+
+
 
 /* ========================== PROXIMAS CARRERAS ========================== */
 /* ========================== PROXIMAS CARRERAS ========================== */
@@ -309,6 +331,11 @@ header {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 30px;
+
+    .carrera .nombre {
+        grid-area: b;
+        font-size: 100%;
+    }
 }
 
 .carrera {
@@ -322,13 +349,15 @@ header {
     border: white solid 2px;
     border-radius: 50px;
     transition: transform 0.3s ease;
+
+    &:hover {
+        background-color: rgb(10, 10, 10);
+        transition: 0.3s;
+        transform: scale(1.02);
+    }
 }
 
-.carrera:hover {
-    background-color: rgb(10, 10, 10);
-    transition: 0.3s;
-    transform: scale(1.02);
-}
+
 
 .imgs {
     grid-area: a;
@@ -336,10 +365,6 @@ header {
     padding: 10px;
 }
 
-.proximas-carreras .carrera .nombre {
-    grid-area: b;
-    font-size: 100%;
-}
 
 .fecha {
     grid-area: c;
@@ -353,26 +378,27 @@ header {
 /* ========================== FOOTER ========================== */
 
 footer {
-    background-color: rgb(20, 20, 20);
+    background-color: $body-color;
     color: white;
     padding: 20px;
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .copy {
+            text-align: center;
+            flex-grow: 1;
+            margin-left: 180px;
+        }
+
+        .social a {
+            margin-left: 10px;
+        }
+    }
 }
 
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.copy {
-    text-align: center;
-    flex-grow: 1;
-    margin-left: 180px;
-}
-
-.social a {
-    margin-left: 10px;
-}
 
 /* ========================== CAMPEONATO ========================== */
 /* ========================== CAMPEONATO ========================== */
@@ -403,7 +429,7 @@ td {
     font-size: 80%;
 }
 
-.img-tabla{
+.img-tabla {
     width: 50px;
 }
 
@@ -418,25 +444,28 @@ td {
     grid-template-rows: repeat(3, auto);
     padding: 40px;
     gap: 30px;
+
+    .vid-container {
+        width: 90%;
+        margin: auto;
+        border: 1px solid white;
+        padding-top: 320px;
+        position: relative;
+
+        & iframe {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
 }
 
-.videos .vid-container {
-    width: 90%;
-    margin: auto;
-    border: 1px solid white;
-    padding-top: 320px;
-    position: relative;
-}
 
-.vid-container iframe {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-}
+
 
 /* ========================== PILOTOS ========================== */
 /* ========================== PILOTOS ========================== */
@@ -448,23 +477,27 @@ td {
     padding: 30px 0px;
     width: 80%;
     margin: 0 auto;
+
+    .pilotos-container {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(6, auto);
+        gap: 30px;
+    }
+
+    .pos img {
+        width: 100%;
+    }
+
+    .pilotos .pos h3 {
+        font-size: 80%;
+        padding: 10px 10px;
+    }
 }
 
-.pilotos-container {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-template-rows: repeat(6, auto);
-    gap: 30px;
-}
 
-.pilotos .pos img {
-    width: 100%;
-}
 
-.pilotos .pos h3 {
-    font-size: 80%;
-    padding: 10px 10px;
-}
+
 
 
 /* ========================== SECCION NOTA ========================== */
@@ -472,51 +505,53 @@ td {
 
 .section-nota {
     padding: 50px;
-}
-.article-nota {
-    margin-bottom: 20px;
-    background-color: rgb(30, 30, 30);
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
 
-.article-nota h2 {
-    padding-top: 10px;
-}
+    .article-nota {
+        margin-bottom: 20px;
+        background-color: $header-color;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
 
-.fecha {
-    color: #999;
-    font-style: italic;
-    margin-top: 5px;
-    transition: color 0.3s ease;
-    display: flex;
-    justify-content: center;
-}
+        h2 {
+            padding-top: 10px;
+        }
 
-.image-container {
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
+        .fecha {
+            color: #999;
+            font-style: italic;
+            margin-top: 5px;
+            transition: color 0.3s ease;
+            display: flex;
+            justify-content: center;
+        }
 
-.image-container img {
-    max-width: 80%;
-    border-radius: 5px;
-    margin-top: 20px;
-    transform: scale(1);
-    transition: transform 0.3s ease;
-}
+        .image-container {
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease;
 
-.image-container:hover img {
-    transform: scale(1.1);
-    border-radius: 5px;
-}
+            &:hover img {
+                transform: scale(1.1);
+                border-radius: 5px;
+            }
 
-.content-nota {
-    margin-top: 20px;
-    line-height: 1.5;
-    transition: opacity 0.3s ease;
+            img {
+                max-width: 80%;
+                border-radius: 5px;
+                margin-top: 20px;
+                transform: scale(1);
+                transition: transform 0.3s ease;
+            }
+        }
+
+        .content-nota {
+            margin-top: 20px;
+            line-height: 1.5;
+            transition: opacity 0.3s ease;
+        }
+
+    }
 }
 
 
@@ -537,11 +572,14 @@ td {
         align-items: center;
     }
 
-    .noticia1:hover, .noticia2:hover, .noticia3:hover, .noticia4:hover{
+    .noticia1:hover,
+    .noticia2:hover,
+    .noticia3:hover,
+    .noticia4:hover {
         transform: scale(1.0);
     }
 
-    .pilotos-container {
+    .pilotos .pilotos-container {
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(6, auto);
@@ -558,7 +596,7 @@ td {
 /* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
 
 @media screen and (max-width : 800px) {
-    .navegacion{
+    .navegacion {
         display: none;
     }
 
@@ -571,30 +609,36 @@ td {
         align-items: center;
     }
 
-    .lideres{
+    .lideres {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        .pos {
+            min-width: 250px;
+
+            .img-container {
+                min-width: 250px;
+            }
+        }
     }
 
-    .pos{
-        min-width: 250px;
-    }
-    .lideres .pos .img-container {
-        min-width: 250px;
-    }
-    
-    .footer-container{
-        display: flex;
-        flex-direction: column;
+    footer {
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+
+            .copy {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding-bottom: 10px;
+            }
+        }
+
     }
 
-    .copy{
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding-bottom: 10px;
-    }
 
     .videos {
         display: grid;
@@ -624,7 +668,7 @@ td {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: rgb(30, 30, 30);
+        background-color: $header-color;
         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         color: #FFF;
         height: 50px;
@@ -668,7 +712,7 @@ td {
         width: 30px;
         transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
         border-radius: 100px;
-        
+
     }
 
     .menu-button::before {
@@ -747,20 +791,24 @@ td {
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(6, auto);
         gap: 30px;
+
+        .pos {
+            width: 18vw;
+            border: 2px solid white;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 120px;
+
+            img {
+                width: 100%;
+            }
+        }
     }
-    .pilotos .pilotos-container .pos {
-        width: 18vw;
-        border: 2px solid white;
-        border-radius: 50px;
-        transition: transform 0.3s ease;
-        margin-left: auto;
-        margin-right: auto;
-        min-width: 120px;
-    }
-    .pilotos .pos img {
-        width: 100%;
-    }
+
 }
+
 /* ========================== MODO SMARTPHONE ========================== */
 /* ========================== MODO SMARTPHONE ========================== */
 /* ========================== MODO SMARTPHONE ========================== */
@@ -769,9 +817,10 @@ td {
 /* ========================== MODO SMARTPHONE ========================== */
 
 @media screen and (max-width : 414px) {
-    .navegacion{
+    .navegacion {
         display: none;
     }
+
     #noticias {
         display: flex;
         flex-direction: column;
@@ -779,51 +828,49 @@ td {
         text-align: center;
         align-items: center;
     }
-    #noticias {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
 
-    .noticia1:hover, .noticia2:hover, .noticia3:hover, .noticia4:hover{
-        transform: scale(1.0);
-    }
-
-    .lideres{
+    .lideres {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        .pos {
+            min-width: 120px;
+
+            .img-container {
+                min-width: 120px;
+            }
+        }
     }
 
-    .pos{
-        min-width: 120px;
-    }
-    .lideres .pos .img-container {
-        min-width: 120px;
-    }
-    
-    .ultimos-videos{
+    .ultimos-videos {
         display: flex;
         flex-direction: column;
     }
 
-    .proximas-carreras{
+    .proximas-carreras {
         display: flex;
         flex-direction: column;
         gap: 10px;
         align-items: center;
+
+        .carrera {
+            max-width: 230px;
+        }
     }
 
-    .carrera{
-        max-width: 230px;
-    }
+    .section-nota {
 
-    .section-nota .article-nota .content-nota .content, p{
-        font-size: small;
-    }
-    
+        .article-nota {
 
+            .content-nota {
+
+                .content,
+                p {
+                    font-size: small;
+                }
+            }
+        }
+    }
 
 }
