@@ -5,10 +5,6 @@
   box-sizing: border-box;
 }
 
-.top-nav {
-  display: none;
-}
-
 body {
   background: rgb(20, 20, 20);
 }
@@ -51,6 +47,10 @@ a {
 
 li {
   list-style: none;
+}
+
+.top-nav {
+  display: none;
 }
 
 /* ========================== VARIABLES DE COLORES ========================== */
@@ -101,6 +101,27 @@ header .logo:hover {
   padding: 10px 0px;
   display: flex;
   justify-content: center;
+}
+
+/* ========================== FOOTER ========================== */
+/* ========================== FOOTER ========================== */
+footer {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  padding: 20px;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .copy {
+  text-align: center;
+  flex-grow: 1;
+  margin-left: 180px;
+}
+footer .footer-container .social a {
+  margin-left: 10px;
 }
 
 /* ========================== ULTIMAS NOTICIAS ========================== */
@@ -308,27 +329,6 @@ header .logo:hover {
   text-align: center;
   padding-top: 10px;
   font-size: 100%;
-}
-
-/* ========================== FOOTER ========================== */
-/* ========================== FOOTER ========================== */
-footer {
-  background-color: rgb(20, 20, 20);
-  color: white;
-  padding: 20px;
-}
-footer .footer-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer .footer-container .copy {
-  text-align: center;
-  flex-grow: 1;
-  margin-left: 180px;
-}
-footer .footer-container .social a {
-  margin-left: 10px;
 }
 
 /* ========================== CAMPEONATO ========================== */

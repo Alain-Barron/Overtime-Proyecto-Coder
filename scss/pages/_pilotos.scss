@@ -1,0 +1,27 @@
+/* ========================== PILOTOS ========================== */
+/* ========================== PILOTOS ========================== */
+
+
+.pilotos {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+    width: 80%;
+    margin: 0 auto;
+
+    .pilotos-container {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(6, auto);
+        gap: 30px;
+    }
+
+    .pos img {
+        width: 100%;
+    }
+
+    .pilotos .pos h3 {
+        font-size: 80%;
+        padding: 10px 10px;
+    }
+}

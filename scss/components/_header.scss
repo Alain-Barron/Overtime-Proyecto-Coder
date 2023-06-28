@@ -1,0 +1,39 @@
+/* ========================== HEADER ========================== */
+/* ========================== HEADER ========================== */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: $header-color;
+    align-items: center;
+
+    .logo {
+        transition: transform 0.3s ease;
+        padding: 1rem 0px;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+
+    &>li>.anchor_nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 2vw;
+        color: rgb(235, 235, 235);
+    }
+
+    & li a:hover {
+        color: #fdd558;
+        transition: all .3s;
+        transition: opacity 1.5s;
+        background-color: rgb(25, 25, 25);
+        border-radius: 5px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}

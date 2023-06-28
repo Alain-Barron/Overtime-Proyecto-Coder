@@ -1,0 +1,29 @@
+/* ========================== VIDEOS ========================== */
+/* ========================== VIDEOS ========================== */
+
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    padding: 40px;
+    gap: 30px;
+
+    .vid-container {
+        width: 90%;
+        margin: auto;
+        border: 1px solid white;
+        padding-top: 320px;
+        position: relative;
+
+        & iframe {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

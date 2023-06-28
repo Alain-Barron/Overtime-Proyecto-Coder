@@ -1,0 +1,251 @@
+/* ========================== ULTIMAS NOTICIAS ========================== */
+/* ========================== ULTIMAS NOTICIAS ========================== */
+
+#noticias {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-content: center;
+    gap: 1vw;
+    justify-content: center;
+    margin-left: auto;
+    justify-items: center;
+    padding-top: 80px;
+    margin-top: -80px;
+
+    .noticia1,
+    .noticia2,
+    .noticia3,
+    .noticia4 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4 auto);
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d";
+        text-align: center;
+        transition: transform 0.3s ease;
+        padding-top: 30px;
+        max-width: 550px;
+    }
+
+    .noticia1:hover,
+    .noticia2:hover,
+    .noticia3:hover,
+    .noticia4:hover {
+        transform: scale(1.03);
+    }
+
+    .image-container {
+        grid-area: a;
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+.titulo {
+    grid-area: b;
+    text-align: center;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.parrafo {
+    grid-area: c;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    padding-top: 17px;
+    font-size: 100%;
+}
+
+.ver-noticia-completa {
+    grid-area: d;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    font-size: 100%;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+.ver-completo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ver-noticias-completas {
+    display: inline-block;
+    padding: 30px 0px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+
+/* ========================== LIDERES DEL CAMPEONATO ========================== */
+/* ========================== LIDERES DEL CAMPEONATO ========================== */
+
+
+.lideres {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+.pos {
+    width: 18vw;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 150px;
+
+    &:hover {
+        background-color: rgb(10, 10, 10);
+        transition: 0.3s;
+        transform: scale(1.02);
+    }
+
+    .img-container {
+        width: 18vw;
+        min-width: 150px;
+    }
+
+}
+
+.nombre {
+    text-align: center;
+    padding-top: 25px;
+
+}
+
+.pts {
+    color: white;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.ver-completo {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+
+/* ========================== ULTIMOS VIDEOS ========================== */
+/* ========================== ULTIMOS VIDEOS ========================== */
+
+.ultimos-videos {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+
+    .vid-container {
+        width: 50%;
+        margin: auto;
+        border: 1px solid white;
+        padding-top: 30%;
+        position: relative;
+
+        & iframe {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+/* ========================== PROXIMAS CARRERAS ========================== */
+/* ========================== PROXIMAS CARRERAS ========================== */
+
+.proximas-carreras {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    gap: 50px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+    .carrera .nombre {
+        grid-area: b;
+        font-size: 100%;
+    }
+}
+
+.carrera {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "a"
+        "b"
+        "c";
+    border: white solid 2px;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        background-color: rgb(10, 10, 10);
+        transition: 0.3s;
+        transform: scale(1.02);
+    }
+}
+
+
+
+.imgs {
+    grid-area: a;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.fecha {
+    grid-area: c;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 100%;
+}
+

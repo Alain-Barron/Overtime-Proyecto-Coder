@@ -1,0 +1,24 @@
+/* ========================== FOOTER ========================== */
+/* ========================== FOOTER ========================== */
+
+footer {
+    background-color: $body-color;
+    color: white;
+    padding: 20px;
+
+    .footer-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .copy {
+            text-align: center;
+            flex-grow: 1;
+            margin-left: 180px;
+        }
+
+        .social a {
+            margin-left: 10px;
+        }
+    }
+}
