@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
     <title>Overtime NASCAR | Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
             <img src="./imgs/logo.png" alt="Logo Overtime">
         </a>
 
-        <!-- Menu hamburguesa -->
+        <!-- Menu hamburguesa
         <section class="top-nav">
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
@@ -35,9 +37,39 @@
                 <li><a href="./pages/videos.html">Videos</a></li>
                 <li><a href="./pages/pilotos.html">Pilotos</a></li>
             </ul>
-        </section>
+        </section> -->
 
-        <!-- Menu original -->
+        <nav class="navbar navbar-expand-md" style="background-color: #1e1e1e;"
+            class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./pages/campeonato.html">Campeonato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./pages/calendario.html">Calendario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./pages/videos.html">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./pages/pilotos.html">Pilotos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Menu original
         <nav class="navegacion">
             <ul class="menu">
                 <li><a href="./index.html" class="anchor_nav">Inicio</a></li>
@@ -46,7 +78,7 @@
                 <li><a href="./pages/videos.html" class="anchor_nav">Videos</a></li>
                 <li><a href="./pages/pilotos.html" class="anchor_nav">Pilotos</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
 
     <main>
@@ -58,7 +90,7 @@
             <div class="nascar-logo">
                 <img src="./imgs/nascar-logo.png" alt="Logo de Nascar" width="280px">
             </div>
-                
+
             <div class="video-container">
                 <video src="./videos/nascar.mp4" autoplay muted loop></video>
             </div>
@@ -74,19 +106,19 @@
 
         <section id="noticias">
 
-            <article class="noticia1">
+                <article class="noticia1">
 
-                <img src="./imgs/darlington.jpg" alt="Foto Noticia" class="image-container">
-                <h3 class="titulo">Nascar: Hora de visitar a "La Dama de Negro"</h3>
-                <p class="parrafo">Este fin de semana NASCAR visitará Darlington en el marco de la 13ra fecha de la
-                    temporada 2023.
-                    Este fin de semana tendremos una fecha especial porque varios pilotos utilizarán diseños retro
-                    homenajeando a otros pilotos o a ellos mismos. El ganador del año pasado fue Joey Logano</p>
-                <a href="./notas/nota-nascar1.html" class="ver-noticia-completa">Ver noticia completa</a>
-
-
-            </article>
-
+                    <img src="./imgs/darlington.jpg" alt="Foto Noticia" class="image-container">
+                    <h3 class="titulo">Nascar: Hora de visitar a "La Dama de Negro"</h3>
+                    <p class="parrafo">Este fin de semana NASCAR visitará Darlington en el marco de la 13ra fecha de la
+                        temporada 2023.
+                        Este fin de semana tendremos una fecha especial porque varios pilotos utilizarán diseños retro
+                        homenajeando a otros pilotos o a ellos mismos. El ganador del año pasado fue Joey Logano</p>
+                    <a href="./notas/nota-nascar1.html" class="ver-noticia-completa">Ver noticia completa</a>
+    
+    
+                </article>
+            
 
             <article class="noticia2">
 
@@ -298,7 +330,9 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

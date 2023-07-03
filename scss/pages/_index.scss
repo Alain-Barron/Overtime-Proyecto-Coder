@@ -29,6 +29,7 @@
         transition: transform 0.3s ease;
         padding-top: 30px;
         max-width: 550px;
+        
     }
 
     .noticia1:hover,
@@ -47,9 +48,6 @@
         height: 100%;
     }
 }
-
-
-
 
 .titulo {
     grid-area: b;
@@ -277,6 +275,8 @@
         display: none;
     }
 
+
+
     .proximas-carreras {
         display: grid;
         grid-template-columns: auto auto;
@@ -431,6 +431,7 @@
 /* ========================== MODO SMARTPHONE ========================== */
 
 @media screen and (max-width : 414px) {
+    
     .navegacion {
         display: none;
     }
