@@ -22,3 +22,24 @@ footer {
         }
     }
 }
+
+/* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
+
+@media screen and (max-width : 800px) {
+
+    footer {
+
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+
+            .copy {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                padding-bottom: 10px;
+            }
+        }
+
+    }
+}

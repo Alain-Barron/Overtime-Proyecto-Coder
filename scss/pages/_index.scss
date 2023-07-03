@@ -249,3 +249,227 @@
     font-size: 100%;
 }
 
+/* ========================== MODO TABLET ========================== */
+/* ========================== MODO TABLET ========================== */
+
+@media screen and (max-width : 1100px) {
+
+    #noticias {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .noticia1:hover,
+    .noticia2:hover,
+    .noticia3:hover,
+    .noticia4:hover {
+        transform: scale(1.0);
+    }
+}
+
+/* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
+
+@media screen and (max-width : 800px) {
+    .navegacion {
+        display: none;
+    }
+
+    .proximas-carreras {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .lideres {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .pos {
+            min-width: 250px;
+
+            .img-container {
+                min-width: 250px;
+            }
+        }
+    }
+
+    /* ========================== MENU HAMBURGUESA ========================== */
+    /* ========================== MENU HAMBURGUESA ========================== */
+
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $header-color;
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: #FFF;
+        height: 50px;
+        padding: 1em;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding-top: 50px;
+    }
+
+    .menu>li {
+        margin: 0 1rem;
+        overflow: hidden;
+    }
+
+    .menu-button-container {
+        display: none;
+        height: 100%;
+        width: auto;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+        display: block;
+        background-color: #fff;
+        position: absolute;
+        height: 4px;
+        width: 30px;
+        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 100px;
+
+    }
+
+    .menu-button::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    .menu-button::after {
+        content: '';
+        margin-top: 8px;
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::before {
+        margin-top: 0px;
+        transform: rotate(405deg);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    #menu-toggle:checked+.menu-button-container .menu-button::after {
+        margin-top: 0px;
+        transform: rotate(-405deg);
+    }
+
+    @media (max-width: 800px) {
+        .menu-button-container {
+            display: flex;
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            margin-top: 50px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #menu-toggle~.menu li {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        #menu-toggle:checked~.menu li {
+            border: 1px solid #333;
+            height: 2.5em;
+            padding: 0.5em;
+            transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: 1;
+        }
+
+        .menu>li {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0.5em 0;
+            width: 100%;
+            color: white;
+            background-color: #222;
+        }
+
+        .menu>li:not(:last-child) {
+            border-bottom: 1px solid #444;
+        }
+    }
+}
+
+/* ========================== MODO SMARTPHONE ========================== */
+/* ========================== MODO SMARTPHONE ========================== */
+
+@media screen and (max-width : 414px) {
+    .navegacion {
+        display: none;
+    }
+
+    #noticias {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .lideres {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .pos {
+            min-width: 120px;
+
+            .img-container {
+                min-width: 120px;
+            }
+        }
+    }
+
+    .ultimos-videos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .proximas-carreras {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        .carrera {
+            max-width: 230px;
+        }
+    }
+}

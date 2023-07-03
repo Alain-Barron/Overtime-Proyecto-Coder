@@ -27,3 +27,27 @@
         }
     }
 }
+
+/* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
+
+@media screen and (max-width : 800px) {
+    .videos {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        padding: 40px;
+        gap: 30px;
+    }
+
+    /* Media Querie para ajustar la seccion video */
+
+    @media screen and (max-width : 650px) {
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(1, auto);
+            grid-template-rows: repeat(6, auto);
+            padding: 40px;
+            gap: 30px;
+        }
+    }
+}

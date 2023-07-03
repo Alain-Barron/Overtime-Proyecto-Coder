@@ -51,3 +51,22 @@
 
     }
 }
+
+/* ========================== MODO SMARTPHONE ========================== */
+/* ========================== MODO SMARTPHONE ========================== */
+
+@media screen and (max-width : 414px) {
+    .section-nota {
+
+        .article-nota {
+
+            .content-nota {
+
+                .content,
+                p {
+                    font-size: small;
+                }
+            }
+        }
+    }
+}
