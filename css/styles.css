@@ -93,6 +93,13 @@ header .logo:hover {
   border-bottom-right-radius: 0;
 }
 
+/* ========================== MODO SMARTPHONE ========================== */
+/* ========================== MODO SMARTPHONE ========================== */
+@media screen and (max-width: 414px) {
+  header img {
+    width: 80%;
+  }
+}
 /* ========================== HERO ========================== */
 /* ========================== HERO ========================== */
 .hero video {

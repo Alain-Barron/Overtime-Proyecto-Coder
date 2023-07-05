@@ -14,8 +14,11 @@ header {
         &:hover {
             transform: scale(1.03);
         }
+
+
     }
 }
+
 .menu {
     display: flex;
     justify-content: space-around;
@@ -35,5 +38,16 @@ header {
         border-radius: 5px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+    }
+}
+
+/* ========================== MODO SMARTPHONE ========================== */
+/* ========================== MODO SMARTPHONE ========================== */
+
+@media screen and (max-width : 414px) {
+    header {
+        img {
+            width: 80%;
+        }
     }
 }
