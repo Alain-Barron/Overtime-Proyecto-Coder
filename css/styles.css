@@ -654,13 +654,13 @@ td {
 /* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
 /* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
 @media screen and (max-width: 800px) {
-  .pilotos-container {
+  .pilotos .pilotos-container {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(6, auto);
     gap: 30px;
   }
-  .pilotos-container .pos {
+  .pilotos .pilotos-container .pos {
     width: 18vw;
     border: 2px solid white;
     border-radius: 50px;
@@ -669,7 +669,7 @@ td {
     margin-right: auto;
     min-width: 120px;
   }
-  .pilotos-container .pos img {
+  .pilotos .pilotos-container .pos img {
     width: 100%;
   }
 }

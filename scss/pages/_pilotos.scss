@@ -42,23 +42,25 @@
 /* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
 
 @media screen and (max-width : 800px) {
-    .pilotos-container {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(6, auto);
-        gap: 30px;
-
-        .pos {
-            width: 18vw;
-            border: 2px solid white;
-            border-radius: 50px;
-            transition: transform 0.3s ease;
-            margin-left: auto;
-            margin-right: auto;
-            min-width: 120px;
-
-            img {
-                width: 100%;
+    .pilotos{
+        .pilotos-container {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(6, auto);
+            gap: 30px;
+    
+            .pos {
+                width: 18vw;
+                border: 2px solid white;
+                border-radius: 50px;
+                transition: transform 0.3s ease;
+                margin-left: auto;
+                margin-right: auto;
+                min-width: 120px;
+    
+                img {
+                    width: 100%;
+                }
             }
         }
     }
