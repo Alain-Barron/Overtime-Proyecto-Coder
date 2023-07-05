@@ -38,10 +38,10 @@
     }
 }
 
-/* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
-/* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
+/* ========================== MODO SMARTPHONE ========================== */
+/* ========================== MODO SMARTPHONE ========================== */
 
-@media screen and (max-width : 800px) {
+@media screen and (max-width : 530px) {
     .pilotos{
         .pilotos-container {
             display: grid;
