@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overtime NASCAR | Campeonato</title>
-    <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
@@ -22,30 +24,33 @@
             <img src="../imgs/logo.png" alt="Overtime Logo">
         </a>
 
-        <!-- Menu hamburguesa -->
-        <section class="top-nav">
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/campeonato.html">Campeonato</a></li>
-                <li><a href="../pages/calendario.html">Calendario</a></li>
-                <li><a href="../pages/videos.html">Videos</a></li>
-                <li><a href="../pages/pilotos.html">Pilotos</a></li>
-            </ul>
-        </section>
-
-        <!-- Menu original -->
-        <nav class="navegacion">
-            <ul class="menu">
-                <li><a href="../index.html" class="anchor_nav">Inicio</a></li>
-                <li><a href="../pages/campeonato.html" class="anchor_nav">Campeonato</a></li>
-                <li><a href="../pages/calendario.html" class="anchor_nav">Calendario</a></li>
-                <li><a href="../pages/videos.html" class="anchor_nav">Videos</a></li>
-                <li><a href="../pages/pilotos.html" class="anchor_nav">Pilotos</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md"  data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./campeonato.html">Campeonato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./calendario.html">Calendario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./videos.html">Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./pilotos.html">Pilotos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -279,7 +284,12 @@
                 </tbody>
             </table>
         </section>
-        <hr>
+
+        <div class="hr">
+            <hr>
+        </div>
+        
+
         <footer>
             <div class="footer-container">
                 <div class="copy">
