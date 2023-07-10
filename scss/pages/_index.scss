@@ -266,7 +266,7 @@
     .noticia2:hover,
     .noticia3:hover,
     .noticia4:hover {
-        transform: scale(1.0);
+        transform: none;
     }
 }
 
@@ -277,7 +277,16 @@
         display: none;
     }
 
+    #noticias{
+        margin: 0 20px;
+    }
 
+    .noticia1:hover,
+    .noticia2:hover,
+    .noticia3:hover,
+    .noticia4:hover {
+        transform: none;
+    }
 
     .proximas-carreras {
         display: grid;
@@ -438,12 +447,20 @@
         display: none;
     }
 
+
     #noticias {
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         align-items: center;
+    }
+
+    .noticia1:hover,
+    .noticia2:hover,
+    .noticia3:hover,
+    .noticia4:hover {
+        transform: none;
     }
 
     .lideres {

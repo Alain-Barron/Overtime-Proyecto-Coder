@@ -98,6 +98,7 @@ header .logo:hover {
 @media screen and (max-width: 414px) {
   header img {
     width: 80%;
+    margin: 0 20px;
   }
 }
 /* ========================== HERO ========================== */
@@ -368,13 +369,22 @@ footer .footer-container .social a {
   .noticia2:hover,
   .noticia3:hover,
   .noticia4:hover {
-    transform: scale(1);
+    transform: none;
   }
 }
 /* ========================== BREAKPOINT INTERMEDIO ENTRE TABLET Y SMARTPHONE ========================== */
 @media screen and (max-width: 800px) {
   .navegacion {
     display: none;
+  }
+  #noticias {
+    margin: 0 20px;
+  }
+  .noticia1:hover,
+  .noticia2:hover,
+  .noticia3:hover,
+  .noticia4:hover {
+    transform: none;
   }
   .proximas-carreras {
     display: grid;
@@ -515,6 +525,12 @@ footer .footer-container .social a {
     justify-content: center;
     text-align: center;
     align-items: center;
+  }
+  .noticia1:hover,
+  .noticia2:hover,
+  .noticia3:hover,
+  .noticia4:hover {
+    transform: none;
   }
   .lideres {
     display: flex;
