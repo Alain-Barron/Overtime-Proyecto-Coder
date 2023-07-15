@@ -73,24 +73,14 @@ header .logo:hover {
   transform: scale(1.03);
 }
 
-.menu {
-  display: flex;
-  justify-content: space-around;
+.navbar .navbar-nav .nav-link {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
 }
-.menu > li > .anchor_nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 15px 2vw;
-  color: rgb(235, 235, 235);
-}
-.menu li a:hover {
+.navbar .navbar-nav .nav-link:hover {
   color: #fdd558;
-  transition: all 0.3s;
-  transition: opacity 1.5s;
-  background-color: rgb(25, 25, 25);
-  border-radius: 5px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 /* ========================== MODO SMARTPHONE ========================== */
@@ -177,7 +167,7 @@ footer .footer-container .social a {
 #noticias .noticia2:hover,
 #noticias .noticia3:hover,
 #noticias .noticia4:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 #noticias .image-container {
   grid-area: a;
